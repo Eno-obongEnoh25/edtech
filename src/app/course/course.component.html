@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">
+    {{ pageTitle }}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Filter by</div>
+      <div class="col-md-4">
+        <input type="text"
+        [(ngModel)] = 'listFilter'/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Filterd by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table" *ngIf="course.length">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description/th>
+            <th>Primary Category</th>
+            <th>Primary Sub-Category</th>
+            <th>Paid</th>
+            <th>Private</th>
+            <th>Number of Lectures</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of filteredcourse">
+            <td><a [routerLink]="['/course', course.courseId]">
+               {{ course.title }}
+              </a>
+            </td>
+            <td>{{ course.description }}</td>
+            <td>{{ course.primary_category }}</td>
+            <td>{{ course.primary_subcategory }}</td>
+            <td>{{ course.is_paid }}</td>
+            <td>{{ course.is_private }}</td>
+            <td>{{ course.num_lectures }}</td>
+            <td>{{ course.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

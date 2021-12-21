@@ -1,0 +1,24 @@
+[
+  {
+    "courseId": "1",
+    "title": "English",
+    "description": "English",
+    "primary_category": "Languages",
+    "primary_subcategory": "Languages",
+    "is_paid": "ASC",
+    "is_private": "ASC",
+    "num_lectures": "10",
+    "price": "is_paid"
+  },
+  {
+    "courseId": "2",
+    "title": "Maths",
+    "description": "Mathematics",
+    "primary_category": "Sciences",
+    "primary_subcategory": "Natural Sciences",
+    "is_paid": "True",
+    "is_private": "Yes",
+    "num_lectures": "20",
+    "price": "is_paid"
+  }
+]
