@@ -7,13 +7,12 @@ function requireHTTPS(req, res, next) {
 }
 const express = require('express');
 const app = express();
-const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/ud-edtech'));
+app.use(express.static('./dist/edtech'));
 
 app.get('/*', function(req, res) {
-  res.sendFile('index.html', {root: 'dist/ud-edtech/'}
+  res.sendFile('index.html', {root: 'dist/edtech/'}
 );
 });
 
