@@ -15,10 +15,7 @@
         <h4>Filterd by: {{listFilter}}</h4>
       </div>
     </div>
-    <div *ngIf="course.length">
-
-    </div>
-    <!-- <div class="table-responsive">
+    <div class="table-responsive">
       <table class="table" *ngIf="course.length">
         <thead>
           <tr>
@@ -28,7 +25,7 @@
             <th>Primary Sub-Category</th>
             <th>Paid</th>
             <th>Private</th>
-            <th>Number of Lectures</th>
+            <!-- <th>Number of Lectures</th> -->
             <th>Price</th>
           </tr>
         </thead>
@@ -43,11 +40,11 @@
             <td>{{ course.primary_subcategory }}</td>
             <td>{{ course.is_paid }}</td>
             <td>{{ course.is_private }}</td>
-            <td>{{ course.num_lectures }}</td>
+            <!-- <td>{{ course.num_lectures }}</td> -->
             <td>{{ course.price }}</td>
           </tr>
         </tbody>
       </table>
-    </div> -->
+    </div>
   </div>
 </div>

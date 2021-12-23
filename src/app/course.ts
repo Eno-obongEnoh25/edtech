@@ -1,11 +1,11 @@
 export interface ICourse {
-  id: string;
+  id: number;
   title: string;
   description: string;
   primary_category: string;
   primary_subcategory: string;
   is_paid: string;
   is_private: string;
-  num_lectures: number;
+  // num_lectures: number;
   price: string;
 }
