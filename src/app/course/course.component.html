@@ -15,7 +15,10 @@
         <h4>Filterd by: {{listFilter}}</h4>
       </div>
     </div>
-    <div class="table-responsive">
+    <div *ngIf="course.length">
+
+    </div>
+    <!-- <div class="table-responsive">
       <table class="table" *ngIf="course.length">
         <thead>
           <tr>
@@ -45,6 +48,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 </div>
