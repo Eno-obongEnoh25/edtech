@@ -13,7 +13,7 @@ export class CourseService {
   constructor(private http: HttpClient) { }
 
   getCategory(): Observable<ICourse[]> {
-    return this.http.get<ICourse[]>(this.courseUrl).pipe(
+    return this.http.get<ICourse[]>(this.courseUrl, { responseType: 'text' as 'json' }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
       catchError(this.handleError)
     );
