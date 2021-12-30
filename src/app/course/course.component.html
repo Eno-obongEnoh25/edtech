@@ -30,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let course of course">
+          <tr *ngFor="let course of filteredcourse">
             <td><a [routerLink]="['/course', course.id]">
                {{ course.title }}
               </a>
