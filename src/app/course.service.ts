@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -9,12 +9,15 @@ import { ICourse } from './course';
 })
 export class CourseService {
   // private courseUrl = 'assets/course.json';
-  private courseUrl = "{BASE64_ENCODED(uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5)} https://www.udemy.com/api-2.0/courses/?fields[course]=title,headline";
+  private courseUrl = "https://www.udemy.com/api-2.0/courses/?fields[course]=title,headline";
 
   constructor(private http: HttpClient) { }
 
   getCategory(): Observable<ICourse[]> {
-    return this.http.get<ICourse[]>(this.courseUrl, { responseType: 'text' as 'json' }).pipe(
+
+    let headers = new HttpHeaders().set('Authorization', 'Basic {Base64_Encoded(uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5)}');
+
+    return this.http.get<ICourse[]>(this.courseUrl + '/course', { headers }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
       catchError(this.handleError)
     );
