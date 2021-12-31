@@ -9,7 +9,7 @@ import { ICourse } from './course';
 })
 export class CourseService {
   // private courseUrl = 'assets/course.json';
-  private courseUrl = "https://www.udemy.com/api-2.0/courses/?fields[course]=title,headline";
+  private courseUrl = "https://www.udemy.com/api-2.0/courses/";
 
   constructor(private http: HttpClient) { }
 
