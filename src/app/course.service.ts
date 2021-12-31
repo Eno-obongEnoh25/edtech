@@ -15,7 +15,7 @@ export class CourseService {
 
   getCategory(): Observable<ICourse[]> {
 
-    let headers = new HttpHeaders().set('Authorization', 'Basic {Base64_Encoded(uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5)}');
+    let headers = new HttpHeaders().set('Authorization', 'uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5');
 
     return this.http.get<ICourse[]>(this.courseUrl, { headers }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
