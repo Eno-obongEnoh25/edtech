@@ -15,7 +15,7 @@ export class CourseService {
 
   getCategory(): Observable<ICourse[]> {
 
-    let headers = new HttpHeaders().set('Authorization', 'uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5');
+    let headers = new HttpHeaders().set('Authorization', BASE64_ENCODED('VPFNudNEIerZh6kZrqnAlzCokqDHqotZQ5MJV9IM:v3RR7tsNo83d0Jt2iGSrwrwpmJea5lb8d9z2PgtvuMT6WFDLGpsdlte8MvrMPVOYJWh0dSCFVh3lVL37EbFHic2f1Y0n9VgjajBFtNCn4b4OsL42RNhbHq4ooYP3kKhU'));
 
     return this.http.get<ICourse[]>(this.courseUrl, { headers }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
@@ -35,3 +35,7 @@ export class CourseService {
     return throwError(errorMessage);
   }
 }
+function BASE64_ENCODED(arg0: string): string | string[] {
+  throw new Error('Function not implemented.');
+}
+
