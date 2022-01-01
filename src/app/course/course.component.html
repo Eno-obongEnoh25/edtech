@@ -31,7 +31,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let course of filteredcourse">
-            <td><a [routerLink]="['/course', course.id]">
+            <!-- <td><a [routerLink]="['/course', course.id]">
                {{ course.title }}
               </a>
             </td>
@@ -40,8 +40,9 @@
             <td>{{ course.primary_subcategory }}</td>
             <td>{{ course.is_paid }}</td>
             <td>{{ course.is_private }}</td>
-            <!-- <td>{{ course.num_lectures }}</td> -->
-            <td>{{ course.price }}</td>
+            <td>{{ course.num_lectures }}</td>
+            <td>{{ course.price }}</td> -->
+            {{ course | json }}
           </tr>
         </tbody>
       </table>
