@@ -18,7 +18,7 @@ export class CourseService {
     // let headers = new HttpHeaders().set('Authorization', BASE64_ENCODED('VPFNudNEIerZh6kZrqnAlzCokqDHqotZQ5MJV9IM:v3RR7tsNo83d0Jt2iGSrwrwpmJea5lb8d9z2PgtvuMT6WFDLGpsdlte8MvrMPVOYJWh0dSCFVh3lVL37EbFHic2f1Y0n9VgjajBFtNCn4b4OsL42RNhbHq4ooYP3kKhU'));
 
     // return this.http.get<ICourse[]>(this.courseUrl, { headers }).pipe(
-    return this.http.get<ICourse[]>(this.courseUrl).pipe(
+    return this.http.get<ICourse[]>(this.courseUrl, { responseType: 'text' as 'json' }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
       catchError(this.handleError)
     );
