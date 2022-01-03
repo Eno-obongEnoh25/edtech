@@ -37,8 +37,8 @@ export class CourseComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sub = this.courseService.getCategory().subscribe({
       next: course => {
-        (course: ICourse[]) => this.course = course;
-        this.filteredcourse = this.course;
+        this.course = course;
+        // this.filteredcourse = this.course;
       },
         error: err => this.errorMessage = err
     });
