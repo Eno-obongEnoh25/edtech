@@ -32,12 +32,12 @@ export class CourseComponent implements OnInit, OnDestroy {
     course.title.toLocaleLowerCase().includes(filterBy));
   }
 
-  constructor(private courseservice: CourseService) { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.sub = this.courseservice.getCategory().subscribe({
+    this.sub = this.courseService.getCategory().subscribe({
       next: course => {
-        this.course = course;
+        (course: ICourse[]) => this.course = course;
         this.filteredcourse = this.course;
       },
         error: err => this.errorMessage = err
