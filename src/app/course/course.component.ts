@@ -38,7 +38,7 @@ export class CourseComponent implements OnInit, OnDestroy {
     this.sub = this.courseService.getCategory().subscribe({
       next: course => {
         this.course = course;
-        // this.filteredcourse = this.course;
+        this.filteredcourse = this.course;
       },
         error: err => this.errorMessage = err
     });
