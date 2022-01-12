@@ -5,9 +5,12 @@ function requireHTTPS(req, res, next) {
   }
   next();
 }
+
+const cors = require('cors');
 const express = require('express');
 const app = express();
-app.use(requireHTTPS);
+app.use(cors());
+// app.use(requireHTTPS);
 
 app.use(express.static('./dist/edtech'));
 
@@ -17,3 +20,5 @@ app.get('/*', function(req, res) {
 });
 
 app.listen(process.env.PORT || 8080);
+
+
