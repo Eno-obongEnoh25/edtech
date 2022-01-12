@@ -23,7 +23,7 @@ export class CourseService {
         "Content-Type": "application/json;charset=utf-8",
         client_id: "VPFNudNEIerZh6kZrqnAlzCokqDHqotZQ5MJV9IM",
         client_secret:"v3RR7tsNo83d0Jt2iGSrwrwpmJea5lb8d9z2PgtvuMT6WFDLGpsdlte8MvrMPVOYJWh0dSCFVh3lVL37EbFHic2f1Y0n9VgjajBFtNCn4b4OsL42RNhbHq4ooYP3kKhU",
-      }).set( 'Access-Control-Allow-Origin', "*")
+      }).set( 'Access-Control-Allow-Origin', "https://ud-edtech.herokuapp.com/")
 
           ;
 
