@@ -9,7 +9,7 @@ import { ICourse } from './course';
 })
 export class CourseService {
   // private courseUrl = 'assets/course.json';
-  private courseUrl = "Authorization: Basic VlBGTnVkTkVJZXJaaDZrWnJxbkFsekNva3FESHFvdFpRNU1KVjlJTTp2M1JSN3RzTm84M2QwSnQyaUdTcndyd3BtSmVhNWxiOGQ5ejJQZ3R2dU1UNldGRExHcHNkbHRlOE12ck1QVk9ZSldoMGRTQ0ZWaDNsVkwzN0ViRkhpYzJmMVkwbjlWZ2phakJGdE5DbjRiNE9zTDQyUk5oYkhxNG9vWVAza0toVQ== https://www.udemy.com/api-2.0/courses/";
+  private courseUrl = "VlBGTnVkTkVJZXJaaDZrWnJxbkFsekNva3FESHFvdFpRNU1KVjlJTTp2M1JSN3RzTm84M2QwSnQyaUdTcndyd3BtSmVhNWxiOGQ5ejJQZ3R2dU1UNldGRExHcHNkbHRlOE12ck1QVk9ZSldoMGRTQ0ZWaDNsVkwzN0ViRkhpYzJmMVkwbjlWZ2phakJGdE5DbjRiNE9zTDQyUk5oYkhxNG9vWVAza0toVQ== https://www.udemy.com/api-2.0/courses/";
 
   constructor(private http: HttpClient) { }
 
