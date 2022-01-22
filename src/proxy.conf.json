@@ -1,7 +1,11 @@
 {
-  "/api/*": {
-      "target": "https://www.udemy.com/api-2.0",
+  "/api": {
+      "target": "https://udemy.com/api-2.0",
       "secure": false,
-      "logLevel": "debug"
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
   }
 }

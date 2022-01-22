@@ -9,7 +9,7 @@ import { ICourse } from './course';
 })
 export class CourseService {
   // private courseUrl = 'assets/course.json';
-  private courseUrl = "https://udemy.com/api-2.0/courses/";
+  private courseUrl = "uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5 http://localhost:4200/api/courses/";
 
   constructor(private http: HttpClient) { }
 
@@ -27,16 +27,17 @@ export class CourseService {
 
 
 
-    let headers = new HttpHeaders({"Content-Type": "application/json", "Accept": "application/json, text/plain, */*", "Authorization":
-  "Basic VlBGTnVkTkVJZXJaaDZrWnJxbkFsekNva3FESHFvdFpRNU1KVjlJTTp2M1JSN3RzTm84M2QwSnQyaUdTcndyd3BtSmVhNWxiOGQ5ejJQZ3R2dU1UNldGRExHcHNkbHRlOE12ck1QVk9ZSldoMGRTQ0ZWaDNsVkwzN0ViRkhpYzJmMVkwbjlWZ2phakJGdE5DbjRiNE9zTDQyUk5oYkhxNG9vWVAza0toVQ=="});
+    // let httpHeaders = new HttpHeaders({"Content-Type": "application/json", "Authorization": "Basic dVNpVUkza2Q5TUxIbmdCNzZiNUVSMDRYZlVVWktWZW0zZElkUlVBbDpiUlBzamR0UHpxNGhublluQlI2WTNub0RqTkp2ZHJNOGw2YUROeHRjNXVKR1hjZUpjV1ZWcFZ3OGZDczJMNXY5NElCNWs0NlJOTDFCVkcxT1RoWkRvRTBpQmY4cXJmNGVBZXA5RUFMd1B3cnU1M1FmV2o1WTd1eTI0UzVQa0dZNQ=="});
+  // 'dVNpVUkza2Q5TUxIbmdCNzZiNUVSMDRYZlVVWktWZW0zZElkUlVBbDpiUlBzamR0UHpxNGhublluQlI2WTNub0RqTkp2ZHJNOGw2YUROeHRjNXVKR1hjZUpjV1ZWcFZ3OGZDczJMNXY5NElCNWs0NlJOTDFCVkcxT1RoWkRvRTBpQmY4cXJmNGVBZXA5RUFMd1B3cnU1M1FmV2o1WTd1eTI0UzVQa0dZNQ=='});
+  // 'uSiUI3kd9MLHngB76b5ER04XfUUZKVem3dIdRUAl:bRPsjdtPzq4hnnYnBR6Y3noDjNJvdrM8l6aDNxtc5uJGXceJcWVVpVw8fCs2L5v94IB5k46RNL1BVG1OThZDoE0iBf8qrf4eAep9EALwPwru53QfWj5Y7uy24S5PkGY5'});
 
-
-    return this.http.get<ICourse[]>(this.courseUrl, { headers }).pipe(
-    // return this.http.get<ICourse[]>(this.courseUrl, { responseType:'text' as 'json' }).pipe(
+    // return this.http.get<ICourse[]>(this.courseUrl, { headers: httpHeaders })
+    // .pipe(
+    return this.http.get<ICourse[]>(this.courseUrl, { responseType:'text' as 'json' }).pipe(
       tap(data => console.log('All', JSON.stringify(data))),
-      catchError(this.handleError)
-    );
-  }
+      catchError(this.handleError))};
+
+
 
   private handleError(err: HttpErrorResponse) {
 
@@ -51,10 +52,6 @@ export class CourseService {
   }
 }
 
-function Base64ENCOCED(arg0: string): string | string[] {
-  throw new Error('Function not implemented.');
-}
-// function BASE64_ENCODED(arg0: string): string | string[] {
-//   throw new Error('Function not implemented.');
-// }
+
+
 

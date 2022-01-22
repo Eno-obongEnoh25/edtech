@@ -69,10 +69,11 @@
           "configurations": {
             "production": {
               "browserTarget": "Edtech:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "./src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "Edtech:build:development"
+              "browserTarget": "Edtech:build:development",
+              "proxyConfig": "./src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
