@@ -31,11 +31,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let course of filteredcourse">
-            <!-- <td><a [routerLink]="['/course', course.id]">
+         <td><a >
                {{ course.title }}
               </a>
-            </td> -->
-            <td>{{ course.description }}</td>
+            </td>
+            <td>{{ course.headline }}</td>
             <td>{{ course.primary_category }}</td>
             <td>{{ course.primary_subcategory }}</td>
             <td>{{ course.is_paid }}</td>

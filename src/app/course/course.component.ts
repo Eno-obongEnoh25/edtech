@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { ICourse } from '../course';
 import { CourseService } from '../course.service';
 
+
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
@@ -35,13 +36,17 @@ export class CourseComponent implements OnInit, OnDestroy {
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.sub = this.courseService.getCategory().subscribe({
-      next: course => {
-        this.course = course;
-        this.filteredcourse = this.course;
-      },
-        error: err => this.errorMessage = err
-    });
+    this.courseService.getCategory().subscribe((response: any) => {
+      this.course = response.results
+      this.filteredcourse = response.results
+    })
+    // this.sub = this.courseService.getCategory().subscribe({
+    //   next: course => {
+    //     this.course = course;
+    //     this.filteredcourse = this.course;
+    //   },
+    //     error: err => this.errorMessage = err
+    // });
   }
 
   ngOnDestroy() {
